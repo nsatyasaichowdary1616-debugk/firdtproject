@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA // NEXUS — Next-Gen Audio, Smart Wearables & Precision Gear</title>
+  <meta name="description" content="Experience the bleeding edge of consumer technology. Explore titanium active noise cancellation headphones, biometric smart rings, curved AMOLED smartwatches and tactical drones.">
+  <meta name="keywords" content="smart wearables, ANC headphones, futuristic tech, mechanical keyboard, titanium smart ring, 4k drone">
+  <meta name="author" content="Aura Technologies Inc.">
+  
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:title" content="AURA // NEXUS — Future-Ready Smart Tech">
+  <meta property="og:description" content="Ultra-modern audio, wearables and gear crafted with aerospace titanium and neural acoustic architecture.">
+  <meta property="og:image" content="./assets/hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon & Stylesheet -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="header-topbar" id="topAnnouncement">
+    <span>⚡ <strong>AUTUMN LAUNCH DROP:</strong> Enjoy <strong>20% OFF</strong> orders above $200 with code <strong>CYBER20</strong> • Free Worldwide Shipping</span>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" id="brandLogo" aria-label="Aura Home">
+        <div class="logo-badge">⚡</div>
+        <div class="brand-text">AURA<span>NEXUS</span></div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <div class="search-input-wrap">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            class="search-input" 
+            id="searchInput" 
+            placeholder="Search audio, watches, smart rings, drones..." 
+            autocomplete="off"
+            aria-label="Search store products"
+          >
+          <span class="search-clear" id="searchClearBtn" title="Clear search">✕</span>
+        </div>
+      </div>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Currency Selector -->
+        <select class="currency-select" id="currencySelector" aria-label="Select currency">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button class="action-btn" id="themeToggleBtn" title="Toggle Light / Dark Mode" aria-label="Toggle theme">
+          <span id="themeIcon">☀️</span>
+        </button>
+
+        <!-- Wishlist Button -->
+        <button class="action-btn" id="wishlistToggleBtn" title="View Wishlist" aria-label="Open wishlist">
+          <span>❤️</span>
+          <span class="badge-count" id="wishlistBadge" style="display: none;">0</span>
+        </button>
+
+        <!-- Cart Action Button -->
+        <button class="action-btn cart-action-btn" id="cartToggleBtn" title="View Cart" aria-label="Open shopping cart">
+          <span>🛍️</span>
+          <span class="cart-cost-preview" id="headerCartTotal">$0.00</span>
+          <span class="badge-count" id="cartBadge">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Pill Sub-nav -->
+    <nav class="category-nav-bar" aria-label="Product categories">
+      <div class="container">
+        <div class="category-nav-list" id="categoryNavList">
+          <button class="category-pill active" data-category="all" id="pillAll">All Gear</button>
+          <button class="category-pill" data-category="audio" id="pillAudio">🎧 Audio & Acoustics</button>
+          <button class="category-pill" data-category="wearables" id="pillWearables">⌚ Wearables & Rings</button>
+          <button class="category-pill" data-category="hardware" id="pillHardware">⌨️ Computing & Peripherals</button>
+          <button class="category-pill" data-category="optics" id="pillOptics">👓 Smart AR Optics</button>
+          <button class="category-pill" data-category="drones" id="pillDrones">🛸 Autonomous Drones</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="heroSection">
+      <div class="hero-glow-blob one"></div>
+      <div class="hero-glow-blob two"></div>
+
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-pill-badge">
+              <span>🚀 FLAGSHIP LAUNCH 2026</span>
+            </div>
+
+            <h1 class="hero-title">
+              THE SOUND OF <br>
+              <span class="gradient-text">PURE PRECISION.</span>
+            </h1>
+
+            <p class="hero-description">
+              Engineered with 50mm custom acoustic graphene drivers, neural active noise cancelation, and 55 hours of lossless quantum playback.
+            </p>
+
+            <div class="hero-cta-group">
+              <button class="btn-primary" id="heroBuyBtn" onclick="quickAddToCart(1)">
+                <span>⚡ Buy Orion X-1 ($349)</span>
+              </button>
+              <a href="#catalogSection" class="btn-secondary" id="heroExploreBtn">
+                <span>Explore Catalog ↓</span>
+              </a>
+            </div>
+
+            <div class="hero-highlights-strip">
+              <div class="highlight-item">
+                <span class="highlight-number">55H</span>
+                <span class="highlight-label">Lossless Playback</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">-48dB</span>
+                <span class="highlight-label">Neural Noise Cancellation</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-number">4.9 ★</span>
+                <span class="highlight-label">1,240+ Audiophile Reviews</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Element -->
+          <div class="hero-visual">
+            <div class="hero-card-glass">
+              <img src="./assets/hero.jpg" alt="Orion X-1 Titanium Wireless ANC Headphones" class="hero-image" id="heroMainImg">
+              <div class="hero-floating-card">
+                <div class="hero-float-info">
+                  <h4>Orion X-1 Titanium ANC</h4>
+                  <p>Lossless 96kHz/24-bit • Spatial Audio</p>
+                </div>
+                <div class="hero-float-price">$349.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item">
+            <div class="trust-icon-box">🚀</div>
+            <div class="trust-info">
+              <h5>Express Worldwide Dispatch</h5>
+              <p>Free tracking delivery on all orders over $150</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon-box">🛡️</div>
+            <div class="trust-info">
+              <h5>2-Year Flawless Warranty</h5>
+              <p>Instant replacement with zero hassle guarantee</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon-box">🔄</div>
+            <div class="trust-info">
+              <h5>30-Day Risk-Free Trial</h5>
+              <p>Love your gear or return for a 100% full refund</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon-box">🔒</div>
+            <div class="trust-info">
+              <h5>Quantum 256-Bit Checkout</h5>
+              <p>Encrypted Visa, Mastercard, Apple Pay & Crypto</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section class="catalog-section" id="catalogSection">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="section-tag">CURATED HARDWARE COLLECTION</span>
+          <h2 class="section-title">Engineered For The Exceptional</h2>
+          <p class="section-subtitle">Explore high-performance audio transducers, biometric rings, curved sapphire displays, and next-gen computational gear.</p>
+        </div>
+
+        <!-- Filter & Sorting Bar -->
+        <div class="filter-bar">
+          <div class="filter-left" id="filterTags">
+            <button class="filter-btn active" data-filter="all">All Products (7)</button>
+            <button class="filter-btn" data-filter="bestseller">⭐ Bestsellers</button>
+            <button class="filter-btn" data-filter="new">✨ New Releases</button>
+            <button class="filter-btn" data-filter="under300">⚡ Under $300</button>
+          </div>
+
+          <div class="filter-right">
+            <span class="catalog-counter" id="catalogCounter">Showing 7 products</span>
+            <select class="sort-select" id="sortSelector" aria-label="Sort products">
+              <option value="featured">Sort by: Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Grid Container -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Dynamically populated via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep-Dive Showcase Banner (Smart Ring) -->
+    <section class="showcase-section" id="showcaseSection">
+      <div class="container">
+        <div class="showcase-card">
+          <div class="showcase-media">
+            <img src="./assets/smartring.jpg" alt="Nexus Horizon Smart Ring">
+            <div class="showcase-telemetry">
+              <span>● BIO-METRIC TELEMETRY: ACTIVE (99.4% ACCURACY)</span>
+            </div>
+          </div>
+          <div class="showcase-details">
+            <span class="section-tag">ENGINEERING SPOTLIGHT</span>
+            <h2 class="section-title">Nexus Horizon Bio-Ring</h2>
+            <p class="section-subtitle">
+              Milled from a single block of Grade-5 Aerospace Titanium. Monitors continuous heart-rate variability, blood-oxygen saturation, and circadian sleep phases with zero screen distractions.
+            </p>
+
+            <div class="showcase-feature-list">
+              <div class="feature-box">
+                <div class="feature-box-title">7-Day Battery Cell</div>
+                <div class="feature-box-desc">Micro solid-state battery charges to full in 22 minutes.</div>
+              </div>
+              <div class="feature-box">
+                <div class="feature-box-title">100-Meter Waterproof</div>
+                <div class="feature-box-desc">Titanium IP68/10ATM deep dive and saltwater resistant.</div>
+              </div>
+              <div class="feature-box">
+                <div class="feature-box-title">Sleep Architecture</div>
+                <div class="feature-box-desc">Advanced REM, deep sleep and skin temperature tracking.</div>
+              </div>
+              <div class="feature-box">
+                <div class="feature-box-title">3 Grams Featherlight</div>
+                <div class="feature-box-desc">Ergonomic inner contour so comfortable you forget it's there.</div>
+              </div>
+            </div>
+
+            <div>
+              <button class="btn-primary" onclick="openQuickView(5)">
+                <span>Discover Nexus Ring ($289)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews & Social Proof -->
+    <section class="reviews-section" id="reviewsSection">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">VERIFIED OWNER REVIEWS</span>
+          <h2 class="section-title">Trusted By Visionaries</h2>
+          <p class="section-subtitle">Real experiences from engineers, sound producers, and tech enthusiasts across the globe.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The Orion X-1 headphones are genuinely on another level compared to standard Sony or Bose ANC. The soundstage is vast, and the titanium build feels indestructible."</p>
+            <div class="review-author">
+              <div class="author-avatar">AL</div>
+              <div class="author-meta">
+                <h5>Alexander Lin</h5>
+                <span>Verified Buyer • Orion X-1</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The Nexus Smart Ring changed my recovery game. Battery lasts an entire week, and the sleep phase diagnostics are scarily accurate without having an annoying screen on my wrist."</p>
+            <div class="review-author">
+              <div class="author-avatar">MK</div>
+              <div class="author-meta">
+                <h5>Dr. Maya Kapoor</h5>
+                <span>Verified Buyer • Nexus Horizon Ring</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Valence 75% keyboard has the most satisfying tactile acoustic profile out of the box. The CNC aluminium weight and gasket dampening are pure luxury."</p>
+            <div class="review-author">
+              <div class="author-avatar">DV</div>
+              <div class="author-meta">
+                <h5>David Vance</h5>
+                <span>Verified Buyer • Valence 75% Keyboard</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIP Newsletter Subscription -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-content">
+            <span class="section-tag">EARLY HARDWARE ACCESS</span>
+            <h3>Join The Aura Priority Syndicate</h3>
+            <p>Subscribe to receive limited batch prototype invites, engineering teardowns, and an instant 15% discount code applied to your first order.</p>
+
+            <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+              <input 
+                type="email" 
+                class="newsletter-input" 
+                id="newsletterEmail" 
+                placeholder="Enter your email address..." 
+                required
+              >
+              <button type="submit" class="btn-primary" id="newsletterSubmitBtn">
+                <span>Unlock VIP 15% Off</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-badge">⚡</div>
+            <div class="brand-text">AURA<span>NEXUS</span></div>
+          </div>
+          <p>
+            Pioneering the intersection of neural acoustic engineering, wearable telemetry, and precision titanium hardware.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon-btn" title="Twitter / X">𝕏</a>
+            <a href="#" class="social-icon-btn" title="GitHub">⚡</a>
+            <a href="#" class="social-icon-btn" title="Instagram">📸</a>
+            <a href="#" class="social-icon-btn" title="Discord">💬</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Hardware</h4>
+          <ul>
+            <li><a href="#" onclick="filterByCategory('audio')">Acoustics & Headphones</a></li>
+            <li><a href="#" onclick="filterByCategory('wearables')">Smart Rings & Watches</a></li>
+            <li><a href="#" onclick="filterByCategory('hardware')">Mechanical Keyboards</a></li>
+            <li><a href="#" onclick="filterByCategory('optics')">Augmented Reality Optics</a></li>
+            <li><a href="#" onclick="filterByCategory('drones')">Autonomous 4K Drones</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Support & Warranty</h4>
+          <ul>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Global Shipping Rates</a></li>
+            <li><a href="#">2-Year Replacement Warranty</a></li>
+            <li><a href="#">30-Day Hassle-Free Returns</a></li>
+            <li><a href="#">Firmware & Drivers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">Our Engineering Labs</a></li>
+            <li><a href="#">Materials & Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Aura Nexus Technologies Inc. All rights reserved.</p>
+        <div class="payment-badges">
+          <span class="payment-badge">Apple Pay</span>
+          <span class="payment-badge">Google Pay</span>
+          <span class="payment-badge">Visa</span>
+          <span class="payment-badge">Mastercard</span>
+          <span class="payment-badge">Bitcoin</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Interactive Modals & Slide-out Drawers
+       ========================================================================== -->
+
+  <!-- Backdrop Dimmer Overlay -->
+  <div class="backdrop-overlay" id="backdropOverlay" onclick="closeAllModals()"></div>
+
+  <!-- Cart Slide-out Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <h3>
+        <span>🛍️ Your Hardware Cart</span>
+        <span class="badge-count" id="drawerCartCount">0</span>
+      </h3>
+      <button class="cart-close-btn" id="cartCloseBtn" onclick="toggleCartDrawer(false)" aria-label="Close cart">✕</button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="free-shipping-progress" id="shippingProgressBox">
+      <div class="free-shipping-text">
+        <span id="shippingText">Add $150.00 more for Free Worldwide Express Shipping</span>
+        <span id="shippingPercent">0%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="shippingProgressBar"></div>
+      </div>
+    </div>
+
+    <!-- Cart Item List -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <!-- Cart Drawer Footer -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="coupon-row">
+        <input type="text" class="coupon-input" id="couponInput" placeholder="Discount code (e.g. CYBER20)">
+        <button class="coupon-apply-btn" id="applyCouponBtn" onclick="applyDiscountCoupon()">Apply</button>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+
+      <div class="cart-summary-line" id="discountLine" style="display: none; color: var(--accent-emerald);">
+        <span>Discount (<span id="discountName">CODE</span>)</span>
+        <span id="cartDiscount">-$0.00</span>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Estimated Express Shipping</span>
+        <span id="cartShipping">FREE</span>
+      </div>
+
+      <div class="cart-summary-line total">
+        <span>Total Due</span>
+        <span id="cartFinalTotal">$0.00</span>
+      </div>
+
+      <button class="btn-primary" id="checkoutBtn" onclick="openCheckoutModal()" style="width: 100%; margin-top: 0.5rem;">
+        <span>🔒 Secure Instant Checkout</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Quick View Product Modal -->
+  <div class="modal-window" id="quickViewModal" aria-label="Product Details Modal">
+    <button class="modal-close-btn" onclick="closeQuickView()">✕</button>
+    <div class="quickview-grid" id="quickViewContent">
+      <!-- Populated dynamically -->
+    </div>
+  </div>
+
+  <!-- Wishlist Slide-out / Modal -->
+  <div class="modal-window" id="wishlistModal" aria-label="Saved Wishlist Modal">
+    <div class="checkout-header">
+      <h3>❤️ Saved Wishlist (<span id="wishlistModalCount">0</span>)</h3>
+      <button class="cart-close-btn" onclick="closeWishlistModal()">✕</button>
+    </div>
+    <div class="checkout-body" id="wishlistItemsBody">
+      <!-- Populated dynamically -->
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal-window checkout-modal" id="checkoutModal" aria-label="Checkout Modal">
+    <div class="checkout-header">
+      <h3 id="checkoutModalTitle">⚡ Quantum-Encrypted Checkout</h3>
+      <button class="modal-close-btn" onclick="closeCheckoutModal()">✕</button>
+    </div>
+
+    <div class="checkout-body" id="checkoutModalBody">
+      <div id="checkoutFormStep">
+        <!-- Contact & Address Info -->
+        <div class="form-group-row">
+          <div class="form-field">
+            <label for="checkoutFirstName">First Name</label>
+            <input type="text" id="checkoutFirstName" class="form-input" placeholder="Alex" required>
+          </div>
+          <div class="form-field">
+            <label for="checkoutLastName">Last Name</label>
+            <input type="text" id="checkoutLastName" class="form-input" placeholder="Vance" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="checkoutEmail">Email Address (For shipping updates)</label>
+          <input type="email" id="checkoutEmail" class="form-input" placeholder="alex.vance@example.com" required>
+        </div>
+
+        <div class="form-field">
+          <label for="checkoutAddress">Delivery Address</label>
+          <input type="text" id="checkoutAddress" class="form-input" placeholder="742 Evergreen Terrace, Suite 4B" required>
+        </div>
+
+        <div class="form-group-row">
+          <div class="form-field">
+            <label for="checkoutCity">City</label>
+            <input type="text" id="checkoutCity" class="form-input" placeholder="San Francisco" required>
+          </div>
+          <div class="form-field">
+            <label for="checkoutPostal">Postal Code</label>
+            <input type="text" id="checkoutPostal" class="form-input" placeholder="94107" required>
+          </div>
+        </div>
+
+        <!-- Payment Method Choice -->
+        <div class="form-field" style="margin-top: 0.5rem;">
+          <label>Select Payment Gateway</label>
+          <div class="payment-methods">
+            <button type="button" class="payment-opt active" onclick="selectPaymentMethod('card', this)">💳 Credit Card</button>
+            <button type="button" class="payment-opt" onclick="selectPaymentMethod('applepay', this)">🍎 Apple Pay</button>
+            <button type="button" class="payment-opt" onclick="selectPaymentMethod('crypto', this)">₿ Bitcoin / USDC</button>
+          </div>
+        </div>
+
+        <!-- Card Mock Inputs -->
+        <div id="cardPaymentDetails">
+          <div class="form-field">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" class="form-input" placeholder="•••• •••• •••• 4242" maxlength="19">
+          </div>
+          <div class="form-group-row">
+            <div class="form-field">
+              <label for="cardExp">Expiry</label>
+              <input type="text" id="cardExp" class="form-input" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div class="form-field">
+              <label for="cardCvc">CVC</label>
+              <input type="text" id="cardCvc" class="form-input" placeholder="123" maxlength="4">
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Total Preview -->
+        <div class="cart-summary-line total" style="margin-top: 1rem;">
+          <span>Total To Pay</span>
+          <span id="checkoutTotalAmount">$0.00</span>
+        </div>
+
+        <button type="button" class="btn-primary" id="confirmOrderBtn" onclick="processOrderCheckout()" style="width: 100%; margin-top: 1rem;">
+          <span>Complete Order & Authorize Payment</span>
+        </button>
+      </div>
+
+      <!-- Success Confirmation State (shown after submission) -->
+      <div class="success-screen" id="checkoutSuccessStep" style="display: none;">
+        <div class="success-check-icon">✓</div>
+        <h3 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800;">Order Confirmed!</h3>
+        <p style="color: var(--text-secondary); max-width: 440px;">
+          Thank you for choosing Aura Nexus. Your gear has entered precision quality-control calibration and will dispatch within 12 hours.
+        </p>
+
+        <div class="order-badge-pill" id="confirmedOrderNumber">ORDER #AUR-98421</div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-sm); padding: 1.25rem; width: 100%; text-align: left; margin: 1rem 0;">
+          <div class="cart-summary-line">
+            <span>Tracking Status</span>
+            <span style="color: var(--accent-cyan); font-weight: 700;">Preparing Priority Shipment</span>
+          </div>
+          <div class="cart-summary-line" style="margin-top: 0.5rem;">
+            <span>Estimated Delivery</span>
+            <span style="color: var(--text-main); font-weight: 600;">2-3 Business Days</span>
+          </div>
+          <div class="cart-summary-line" style="margin-top: 0.5rem;">
+            <span>Confirmation Sent To</span>
+            <span id="receiptEmail" style="color: var(--text-main);">customer@example.com</span>
+          </div>
+        </div>
+
+        <button class="btn-primary" onclick="closeCheckoutModal(); resetCart();" style="width: 100%;">
+          <span>Return To Store</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Confetti Canvas for Order Success -->
+  <canvas id="confettiCanvas" style="position: fixed; inset: 0; pointer-events: none; z-index: 2000; width: 100vw; height: 100vh; display: none;"></canvas>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
